@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl" lang="ar"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="author" content="Paweł 'kilab' Balicki - kilab.pl">
+<title>SimpleAdmin</title>
+<link rel="stylesheet" type="text/css" href="inc/style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="inc/navi.css" media="screen">
+<script type="text/javascript" src="inc/jquery-1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".box .h_title").not(this).next("ul").hide("normal");
+	$(".box .h_title").not(this).next("#home").show("normal");
+	$(".box").children(".h_title").click( function() { $(this).next("ul").slideToggle(); });
+});
+</script>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<div id="top">
+			<div class="right">
+				<p>مرحباً, <strong>فهد س.</strong> [ <a href="">تسجيل الخروج</a> ]</p>
+			</div>
+			<div class="left">
+				<div class="align-right">
+					<p>آخر دخول: <strong>23-04-2012 23:12</strong></p>
+				</div>
+			</div>
+		</div>
+		<div id="nav">
+			<ul>
+				<li class="upp"><a href="#">التحكم الرئيسي</a>
+					<ul>
+						<li>› <a href="">زيارة الموقع</a></li>
+						<li>› <a href="">التقارير</a></li>
+						<li>› <a href="">إضافة صفحة جديدة</a></li>
+						<li>› <a href="">إعدادات الموقع</a></li>
+					</ul>
+				</li>
+				<li class="upp"><a href="#">إدارة المحتوى</a>
+					<ul>
+						<li>› <a href="">عرض جميع الصفحات</a></li>
+						<li>› <a href="">إضافة صفحة جديدة</a></li>
+						<li>› <a href="">إضافة معرض جديد</a></li>
+						<li>› <a href="">التصنيفات</a></li>
+					</ul>
+				</li>
+				<li class="upp"><a href="#">المُستخدمين</a>
+					<ul>
+						<li>› <a href="">عرض الجميع </a></li>
+						<li>› <a href="">إضافة مُستخدم جديد</a></li>
+						<li>› <a href="">إقفال المُستخدمين</a></li>
+					</ul>
+				</li>
+				<li class="upp"><a href="#">الإعدادات</a>
+					<ul>
+						<li>› <a href="">إعدادات الموقع</a></li>
+						<li>› <a href="">نموذج التواصل</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="content">
+		<div id="sidebar">
+			<div class="box">
+				<div class="h_title">› التحكم الرئيسي</div>
+				<ul style="display: block;" id="home">
+					<li class="b1"><a class="icon view_page" href="">زيارة الموقع</a></li>
+					<li class="b2"><a class="icon report" href="">التقارير</a></li>
+					<li class="b1"><a class="icon add_page" href="">إضافة صفحة جديدة</a></li>
+					<li class="b2"><a class="icon config" href="">إعدادات الموقع</a></li>
+				</ul>
+			</div>
+
+			<div class="box">
+				<div class="h_title">› إدارة المُحتوى</div>
+				<ul style="display: none;">
+					<li class="b1"><a class="icon page" href="">عرض جميع الصفحات</a></li>
+					<li class="b2"><a class="icon add_page" href="">إضافة صفحة جديدة</a></li>
+					<li class="b1"><a class="icon photo" href="">إضافة معرض جديد</a></li>
+					<li class="b2"><a class="icon category" href="">التصنيفات</a></li>
+				</ul>
+			</div>
+			<div class="box">
+				<div class="h_title">› المُستخدمين</div>
+				<ul style="display: none;">
+					<li class="b1"><a class="icon users" href="">عرض جميع المُستخدمين</a></li>
+					<li class="b2"><a class="icon add_user" href="">إضافة مُستخدم جديد</a></li>
+					<li class="b1"><a class="icon block_users" href="">إقفال المُستخدمين</a></li>
+				</ul>
+			</div>
+			<div class="box">
+				<div class="h_title">› الإعدادات</div>
+				<ul style="display: none;">
+					<li class="b1"><a class="icon config" href="">إعدادات الموقع</a></li>
+					<li class="b2"><a class="icon contact" href="">نموذج التواصل</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="main">
+			<div class="half_w half_left">
+				<div class="h_title">إحصائيات الزيارات</div>
+					<script src="inc/highcharts_init.js"></script>
+					<div dir="ltr" id="container" style="min-width: 300px; height: 180px; margin: 0 auto"><div style="position: relative; overflow: hidden; width: 330px; height: 180px; text-align: left; line-height: normal; font-family: &quot;Lucida Grande&quot;,&quot;Lucida Sans Unicode&quot;,Verdana,Arial,Helvetica,sans-serif; font-size: 12px; left: -0.5px; top: 0px;" id="highcharts-0" class="highcharts-container"><svg height="180" width="330" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="highcharts-1"><rect stroke-width="0" height="51" width="240" y="0" x="0" fill="none" ry="0" rx="0"></rect></clipPath></defs><rect stroke="#4572A7" stroke-width="0" height="180" width="330" y="0" x="0" fill="#FFFFFF" ry="5" rx="5"></rect><g zIndex="1" class="highcharts-grid"></g><g zIndex="1" class="highcharts-grid"><path zIndex="1" stroke-width="1" stroke="#C0C0C0" fill="none" d="M 60 50.5 L 300 50.5"></path><path zIndex="1" stroke-width="1" stroke="#C0C0C0" fill="none" d="M 60 100.5 L 300 100.5"></path></g><g zIndex="3" class="highcharts-series-group"><g clip-path="url(http://templaty.com/examples/web-templates/SimpleAdmin_kilab_pl/index.html#highcharts-1)" transform="translate(60,50)" visibility="visible" class="highcharts-series"><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="12" width="19" y="38" x="-3.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="12" width="19" y="38" x="-3.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="12" width="19" y="38" x="-3.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="12" width="19" y="38" x="-3.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="11" width="19" y="39" x="10.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="11" width="19" y="39" x="10.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="11" width="19" y="39" x="10.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="11" width="19" y="39" x="10.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="17" width="19" y="33" x="23.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="17" width="19" y="33" x="23.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="17" width="19" y="33" x="23.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="17" width="19" y="33" x="23.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="23" width="19" y="27" x="36.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="23" width="19" y="27" x="36.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="23" width="19" y="27" x="36.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="23" width="19" y="27" x="36.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="11" width="19" y="39" x="50.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="11" width="19" y="39" x="50.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="11" width="19" y="39" x="50.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="11" width="19" y="39" x="50.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="13" width="19" y="37" x="63.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="13" width="19" y="37" x="63.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="13" width="19" y="37" x="63.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="13" width="19" y="37" x="63.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="24" width="19" y="26" x="76.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="24" width="19" y="26" x="76.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="24" width="19" y="26" x="76.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="24" width="19" y="26" x="76.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="42" width="19" y="8" x="90.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="42" width="19" y="8" x="90.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="42" width="19" y="8" x="90.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="42" width="19" y="8" x="90.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="15" width="19" y="35" x="103.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="15" width="19" y="35" x="103.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="15" width="19" y="35" x="103.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="15" width="19" y="35" x="103.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="12" width="19" y="38" x="116.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="12" width="19" y="38" x="116.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="12" width="19" y="38" x="116.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="12" width="19" y="38" x="116.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="15" width="19" y="35" x="130.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="15" width="19" y="35" x="130.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="15" width="19" y="35" x="130.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="15" width="19" y="35" x="130.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="14" width="19" y="36" x="143.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="14" width="19" y="36" x="143.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="14" width="19" y="36" x="143.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="14" width="19" y="36" x="143.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="11" width="19" y="39" x="156.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="11" width="19" y="39" x="156.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="11" width="19" y="39" x="156.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="11" width="19" y="39" x="156.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="17" width="19" y="33" x="170.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="17" width="19" y="33" x="170.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="17" width="19" y="33" x="170.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="17" width="19" y="33" x="170.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="15" width="19" y="35" x="183.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="15" width="19" y="35" x="183.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="15" width="19" y="35" x="183.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="15" width="19" y="35" x="183.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="12" width="19" y="38" x="196.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="12" width="19" y="38" x="196.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="12" width="19" y="38" x="196.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="12" width="19" y="38" x="196.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="34" width="19" y="16" x="210.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="34" width="19" y="16" x="210.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="34" width="19" y="16" x="210.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="34" width="19" y="16" x="210.5" fill="#32353A" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.05" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="5" height="12" width="19" y="38" x="223.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="3" height="12" width="19" y="38" x="223.5" fill="none" ry="0" rx="0"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" isShadow="true" stroke="rgb(0, 0, 0)" stroke-width="1" height="12" width="19" y="38" x="223.5" fill="none" ry="0" rx="0"></rect><rect stroke="#FFFFFF" stroke-width="1" height="12" width="19" y="38" x="223.5" fill="#32353A" ry="0" rx="0"></rect></g></g><text zIndex="4" class="highcharts-title" text-anchor="middle" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:16px;color:#3E576F;fill:#3E576F;" y="25" x="165"><tspan x="165">Visits this month</tspan></text><g zIndex="7" class="highcharts-axis"><text visibility="hidden" transform="rotate(-45 0 0)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="0" x="0"><tspan x="0">11-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 80 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="80"><tspan x="80">12-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 93.33333333333333 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="93.33333333333333"><tspan x="93.33333333333333">13-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 106.66666666666667 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="106.66666666666667"><tspan x="106.66666666666667">14-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 120 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="120"><tspan x="120">15-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 133.33333333333334 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="133.33333333333334"><tspan x="133.33333333333334">16-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 146.66666666666669 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="146.66666666666669"><tspan x="146.66666666666669">17-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 160.00000000000003 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="160.00000000000003"><tspan x="160.00000000000003">18-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 173.33333333333334 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="173.33333333333334"><tspan x="173.33333333333334">19-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 186.66666666666669 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="186.66666666666669"><tspan x="186.66666666666669">20-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 200 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="200"><tspan x="200">21-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 213.33333333333334 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="213.33333333333334"><tspan x="213.33333333333334">22-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 226.66666666666669 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="226.66666666666669"><tspan x="226.66666666666669">23-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 240 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="240"><tspan x="240">24-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 253.33333333333334 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="253.33333333333334"><tspan x="253.33333333333334">25-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 266.6666666666667 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="266.6666666666667"><tspan x="266.6666666666667">26-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 279.99999999999994 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="279.99999999999994"><tspan x="279.99999999999994">27-03-2012</tspan></text><text visibility="visible" transform="rotate(-45 293.3333333333333 114)" text-anchor="end" style="font-family:Tahoma, Verdana, sans-serif;font-size:9px;color:#666;line-height:14px;fill:#666;" y="114" x="293.3333333333333"><tspan x="293.3333333333333">28-03-2012</tspan></text><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 87.5 100 L 87.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 100.5 100 L 100.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 113.5 100 L 113.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 127.5 100 L 127.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 140.5 100 L 140.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 153.5 100 L 153.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 167.5 100 L 167.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 180.5 100 L 180.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 193.5 100 L 193.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 207.5 100 L 207.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 220.5 100 L 220.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 233.5 100 L 233.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 247.5 100 L 247.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 260.5 100 L 260.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 273.5 100 L 273.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 287.5 100 L 287.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 300.5 100 L 300.5 105"></path><path stroke-width="1" stroke="#C0D0E0" fill="none" d="M 73.5 100 L 73.5 105"></path></g><g zIndex="7" class="highcharts-axis"><text visibility="visible" text-anchor="end" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:100px;color:#666;line-height:14px;fill:#666;" y="105.1" x="52"><tspan x="52">0k</tspan></text><text visibility="visible" text-anchor="end" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:100px;color:#666;line-height:14px;fill:#666;" y="55.1" x="52"><tspan x="52">5k</tspan></text></g><text visibility="visible" text-anchor="middle" transform="rotate(270 26 75)" zIndex="7" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#6D869F;font-weight:bold;fill:#6D869F;" y="75" x="26"><tspan x="26">Visits</tspan></text><path visibility="visible" zIndex="7" stroke-width="1" stroke="#C0D0E0" fill="none" d="M 60 100.5 L 300 100.5"></path><g transform="translate(167,55)" visibility="hidden" style="padding:0;white-space:nowrap;" zIndex="8"><rect transform="translate(1,1)" stroke-opacity="0.05" stroke="rgb(0, 0, 0)" isShadow="true" anchorY="0" anchorX="0" fill-opacity="0.85" stroke-width="5" height="42" width="101" y="0" x="0" fill="none" ry="5" rx="5"></rect><rect transform="translate(1,1)" stroke-opacity="0.1" stroke="rgb(0, 0, 0)" isShadow="true" anchorY="0" anchorX="0" fill-opacity="0.85" stroke-width="3" height="42" width="101" y="0" x="0" fill="none" ry="5" rx="5"></rect><rect transform="translate(1,1)" stroke-opacity="0.15000000000000002" stroke="rgb(0, 0, 0)" isShadow="true" anchorY="0" anchorX="0" fill-opacity="0.85" stroke-width="1" height="42" width="101" y="0" x="0" fill="none" ry="5" rx="5"></rect><rect stroke="#32353A" anchorY="0" anchorX="0" fill-opacity="0.85" stroke-width="2" height="42" width="101" y="0" x="0" fill="rgb(255,255,255)" ry="5" rx="5"></rect><text zIndex="1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#333333;fill:#333333;" y="18" x="5"><tspan x="5" style="font-weight:bold">27-03-2012</tspan><tspan x="5" dy="16">Visits: 3,312</tspan></text></g><text zIndex="8" text-anchor="end" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:10px;cursor:pointer;color:#909090;fill:#909090;" y="175" x="320"><tspan x="320">Highcharts.com</tspan></text><g zIndex="9" class="highcharts-tracker"><g clip-path="url(http://templaty.com/examples/web-templates/SimpleAdmin_kilab_pl/index.html#highcharts-1)" transform="translate(60,50)" zIndex="1"><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="12" width="20" y="38" x="-4" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="11" width="20" y="39" x="10" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="17" width="20" y="33" x="23" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="23" width="20" y="27" x="36" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="11" width="20" y="39" x="50" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="13" width="20" y="37" x="63" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="24" width="20" y="26" x="76" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="42" width="20" y="8" x="90" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="15" width="20" y="35" x="103" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="12" width="20" y="38" x="116" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="15" width="20" y="35" x="130" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="14" width="20" y="36" x="143" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="11" width="20" y="39" x="156" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="17" width="20" y="33" x="170" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="15" width="20" y="35" x="183" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="12" width="20" y="38" x="196" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="34" width="20" y="16" x="210" fill="rgb(192,192,192)" ry="0" rx="0"></rect><rect style="" visibility="visible" fill-opacity="0.000001" isTracker="1442016647651" stroke-width="0" height="12" width="20" y="38" x="223" fill="rgb(192,192,192)" ry="0" rx="0"></rect></g></g></svg></div></div>
+					<script src="inc/highcharts.js"></script>
+			</div>
+			<div class="half_w half_right">
+				<div class="h_title">إحصائيات الموقع</div>
+				<div class="stats">
+					<div class="today">
+						<h3>اليوم</h3>
+						<p class="count">2 349</p>
+						<p class="type">الزيارات</p>
+						<p class="count">96</p>
+						<p class="type">التعليقات</p>
+						<p class="count">9</p>
+						<p class="type">المقالات</p>
+					</div>
+					<div class="week">
+						<h3>الأسبوع الماضي</h3>
+						<p class="count">12 931</p>
+						<p class="type">الزيارات</p>
+						<p class="count">521</p>
+						<p class="type">التعليقات</p>
+						<p class="count">38</p>
+						<p class="type">المقالات</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="full_w">
+				<div class="h_title">الفقرات, الرؤوس, القوائم و التنبيهات</div>
+				<h1>الرأس1 H1</h1>
+				<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد
+من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق، إذا كنت
+ تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد
+الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص
+العربى مفيد لمصممي المواقع على وجه الخصوص.</p>
+				<h2>الرأس2 H2</h2>
+				<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد
+من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق، إذا كنت
+ تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد
+الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص
+العربى مفيد لمصممي المواقع على وجه الخصوص</p>
+				<h3>الرأس3 H3</h3>
+				<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد
+من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق، إذا كنت
+ تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد
+الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص
+العربى مفيد لمصممي المواقع على وجه الخصوص
+				</p><ul>
+					<li>العُنصر الأول , هذا النص هو مثال لنص يمكن أن يستبدل</li>
+					<li>العنصر الثاني , هذا النص هو مثال لنص يمكن أن يستبدل</li>
+					<li>العنصر الثالث في القائمة , هذا النص هو مثال لنص يمكن أن يستبدل</li>
+					<li>العنصر الرابع , هذا النص هو مثال لنص يمكن أن يستبدل</li>
+				</ul>
+				<h3>قائمة منقطة</h3>
+				<ol>
+					<li>العُنصر الأول , هذا النص هو مثال لنص يمكن أن يستبدل</li>
+					<li>العنصر الثاني , هذا النص هو مثال لنص يمكن أن يستبدل</li>
+					<li>العنصر الثالث في القائمة , هذا النص هو مثال لنص يمكن أن يستبدل</li>
+					<li>العنصر الرابع , هذا النص هو مثال لنص يمكن أن يستبدل</li>
+				</ol>
+                <div class="n_warning"><p>رسالة تنبيه. هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى.</p></div>
+				<div class="n_ok"><p>رسالة نجاح! هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى.</p></div>
+				<div class="n_error"><p>رسالة خطأ! هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى.</p></div>
+			</div>
+
+			<div class="full_w">
+				<div class="h_title">إضافة صفحة جديدة - عناصر النموذج (Form)</div>
+				<form action="" method="post">
+					<div class="element">
+						<label for="name">عنوان الصفحة <span class="red">(مطلوب)</span></label>
+						<input id="name" name="name" class="text err">
+					</div>
+					<div class="element">
+						<label for="category">التصنيف <span class="red">(مطلوب)</span></label>
+						<select name="category" class="err">
+							<option selected="selected" value="0">-- إختر تصنيفاً</option>
+							<option value="1">التصنيف 1</option>
+							<option value="2">التصنيف 4</option>
+							<option value="3">التصنيف 3</option>
+						</select>
+					</div>
+					<div class="element">
+						<label for="comments">التعليقات</label>
+						<input name="comments" value="on" checked="checked" type="radio"> إتاحة <input name="comments" value="off" type="radio"> تعطيل
+					</div>
+					<div class="element">
+						<label for="attach">المُرفقات</label>
+						<input name="attach" type="file">
+					</div>
+					<div class="element">
+						<label for="content">مُحتوى الصفحة <span>(مطلوب)</span></label>
+						<textarea name="content" class="textarea" rows="10"></textarea>
+					</div>
+					<div class="entry">
+						<button type="submit">مُعاينة</button> <button type="submit" class="add">حفظ الصفحة</button> <button class="cancel">إلغاء</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="full_w">
+				<div class="h_title">إدارة الصفحات - الجداول (Table)</div>
+				<h2>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</h2>
+				<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
+هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد
+من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق</p>
+
+				<div class="entry">
+					<div class="sep"></div>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th scope="col">ID</th>
+							<th scope="col">العنوان</th>
+							<th scope="col">الكاتب</th>
+							<th scope="col">التاريخ</th>
+							<th scope="col">التصنيف</th>
+							<th scope="col" style="width: 65px;">تحرير</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td class="align-center">2</td>
+							<td>الرئيسية</td>
+							<td>Paweł B.</td>
+							<td>22-03-2012</td>
+							<td>-</td>
+							<td>
+								<a href="#" class="table-icon edit" title="تحرير"></a>
+								<a href="#" class="table-icon archive" title="أرشّفه"></a>
+								<a href="#" class="table-icon delete" title="حذف"></a>
+							</td>
+						</tr>
+						<tr>
+							<td class="align-center">3</td>
+							<td>عُروضنا</td>
+							<td>فهد سالم</td>
+							<td>22-03-2012</td>
+							<td>-</td>
+							<td>
+								<a href="#" class="table-icon edit" title="تحرير"></a>
+								<a href="#" class="table-icon archive" title="أرشّفه"></a>
+								<a href="#" class="table-icon delete" title="حذف"></a>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="align-center">5</td>
+							<td>عنّا</td>
+							<td>الإدارة</td>
+							<td>23-03-2012</td>
+							<td>-</td>
+							<td>
+								<a href="#" class="table-icon edit" title="تحرير"></a>
+								<a href="#" class="table-icon archive" title="أرشّفه"></a>
+								<a href="#" class="table-icon delete" title="حذف"></a>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="align-center">12</td>
+							<td>التواصل</td>
+							<td>Admin</td>
+							<td>25-03-2012</td>
+							<td>-</td>
+							<td>
+								<a href="#" class="table-icon edit" title="تحرير"></a>
+								<a href="#" class="table-icon archive" title="أرشّفه"></a>
+								<a href="#" class="table-icon delete" title="حذف"></a>
+							</td>
+						</tr>
+						<tr>
+							<td class="align-center">114</td>
+							<td>Portfolio</td>
+							<td>Paweł B.</td>
+							<td>22-03-2012</td>
+							<td>-</td>
+							<td>
+								<a href="#" class="table-icon edit" title="تحرير"></a>
+								<a href="#" class="table-icon archive" title="أرشّفه"></a>
+								<a href="#" class="table-icon delete" title="حذف"></a>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="align-center">116</td>
+							<td>Clients</td>
+							<td>Admin</td>
+							<td>23-03-2012</td>
+							<td>-</td>
+							<td>
+								<a href="#" class="table-icon edit" title="تحرير"></a>
+								<a href="#" class="table-icon archive" title="أرشّفه"></a>
+								<a href="#" class="table-icon delete" title="حذف"></a>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="align-center">131</td>
+							<td>آراء العملاء</td>
+							<td>Admin</td>
+							<td>25-03-2012</td>
+							<td>-</td>
+							<td>
+								<a href="#" class="table-icon edit" title="تحرير"></a>
+								<a href="#" class="table-icon archive" title="أرشّفه"></a>
+								<a href="#" class="table-icon delete" title="حذف"></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="entry">
+					<div class="pagination">
+						<span>« الأولى</span>
+						<span class="active">1</span>
+						<a href="">2</a>
+						<a href="">3</a>
+						<a href="">4</a>
+						<span>...</span>
+						<a href="">23</a>
+						<a href="">24</a>
+						<a href="">الأخيره »</a>
+					</div>
+					<div class="sep"></div>
+					<a class="button add" href="">إضافة صفحة جديدة</a> <a class="button" href="">التصنيفات</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div id="footer">
+		<div class="left">
+			<p>تصميم: <a href="http://kilab.pl/">Paweł Balicki</a> | تعريب: <a href="http://templaty.com/">قالبي</a></p>
+		</div>
+		<div class="right">
+			<p><a href="">مثال على رابط1</a> | <a href="">مثال رابط 2</a></p>
+		</div>
+	</div>
+</div>
+
+
+
+</body></html>

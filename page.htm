@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl" lang="ar"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="author" content="Paweł 'kilab' Balicki - kilab.pl">
+<title>SimpleAdmin</title>
+<link rel="stylesheet" type="text/css" href="inc/style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="inc/navi.css" media="screen">
+<script type="text/javascript" src="inc/jquery-1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".box .h_title").not(this).next("ul").hide("normal");
+	$(".box .h_title").not(this).next("#home").show("normal");
+	$(".box").children(".h_title").click( function() { $(this).next("ul").slideToggle(); });
+});
+</script>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<div id="top">
+			<div class="right">
+				<p>مرحباً, <strong>فهد س.</strong> [ <a href="">تسجيل الخروج</a> ]</p>
+			</div>
+			<div class="left">
+				<div class="align-right">
+					<p>آخر دخول: <strong>23-04-2012 23:12</strong></p>
+				</div>
+			</div>
+		</div>
+		<div id="nav">
+			<ul>
+				<li class="upp"><a href="#">السيارات</a>
+					<ul>
+						<li>› <a href="">اضافة سيارة</a></li>
+						<li>› <a href="">عرض جميع السيارات</a></li>
+						<li>› <a href="">بحث عن سيارة</a></li>
+					</ul>
+				</li>
+				<li class="upp"><a href="#">السائقين</a>
+					<ul>
+						<li>› <a href="">اضافة سائق</a></li>
+						<li>› <a href="">عرض جميع السائقين</a></li>
+						<li>› <a href="">بحث عن سائق</a></li>
+					</ul>
+				</li>
+				<li class="upp"><a href="#">الإعدادات</a>
+					<ul>
+						<li>› <a href="">اعدادات البرنامج</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="content">
+		<div id="sidebar">
+			<div class="box">
+				<div class="h_title">› التحكم الرئيسي</div>
+				<ul style="display: block;" id="home">
+					<li class="b1"><a class="icon view_page" href="">زيارة الموقع</a></li>
+					<li class="b2"><a class="icon report" href="">التقارير</a></li>
+					<li class="b1"><a class="icon add_page" href="">إضافة صفحة جديدة</a></li>
+					<li class="b2"><a class="icon config" href="">إعدادات الموقع</a></li>
+				</ul>
+			</div>
+
+			<div class="box">
+				<div class="h_title">› إدارة المُحتوى</div>
+				<ul style="display: none;">
+					<li class="b1"><a class="icon page" href="">عرض جميع الصفحات</a></li>
+					<li class="b2"><a class="icon add_page" href="">إضافة صفحة جديدة</a></li>
+					<li class="b1"><a class="icon photo" href="">إضافة معرض جديد</a></li>
+					<li class="b2"><a class="icon category" href="">التصنيفات</a></li>
+				</ul>
+			</div>
+			<div class="box">
+				<div class="h_title">› المُستخدمين</div>
+				<ul style="display: none;">
+					<li class="b1"><a class="icon users" href="">عرض جميع المُستخدمين</a></li>
+					<li class="b2"><a class="icon add_user" href="">إضافة مُستخدم جديد</a></li>
+					<li class="b1"><a class="icon block_users" href="">إقفال المُستخدمين</a></li>
+				</ul>
+			</div>
+			<div class="box">
+				<div class="h_title">› الإعدادات</div>
+				<ul style="display: none;">
+					<li class="b1"><a class="icon config" href="">إعدادات الموقع</a></li>
+					<li class="b2"><a class="icon contact" href="">نموذج التواصل</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="main">
+
+		<div class="clear"></div>
+	</div>
+
+	<div id="footer">
+		<div class="left">
+			<p>تصميم: <a href="http://kilab.pl/">Paweł Balicki</a> | تعريب: <a href="http://templaty.com/">قالبي</a></p>
+		</div>
+		<div class="right">
+			<p><a href="">مثال على رابط1</a> | <a href="">مثال رابط 2</a></p>
+		</div>
+	</div>
+</div>
+
+
+
+</body></html>
